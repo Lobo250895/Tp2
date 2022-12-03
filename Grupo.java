@@ -1,2 +1,2 @@
-public class Grupo {
+public class Grupo extends EtapaMundial{
 }

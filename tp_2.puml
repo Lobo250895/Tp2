@@ -1,0 +1,31 @@
+@startuml
+class Partido {
+- Date fecha
+- Equipo local
+- Equipo visitante
+- Resultado resultado
+}
+class Grupo {
+}
+class EtapaMundial {
+- String descripcionEtapa
+- ArrayList<Partido> partidos
++ <<Create>> EtapaMundial(String,ArrayList<Partido>)
++ String getDescripcionEtapa()
++ void setDescripcionEtapa(String)
++ ArrayList<Partido> getPartidos()
++ void setPartidos(ArrayList<Partido>)
+}
+class Equipo {
+- String nombre
+- ArrayList<Partido> partidosJugados
+}
+class Main {
+}
+class Llave {
+}
+class Resultado {
+- int golesLocal
+- int golesVisitante
+}
+@enduml
