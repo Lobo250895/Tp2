@@ -37,5 +37,17 @@ public class EtapaMundial {
                 + EquiposQueAvanzan + "]";
     }
 
+    public void addPartido(Partido partido) {
+        this.partidos.add(partido);
+    }
+
+    public void addEquiposQueAvanzan(Equipo equipo) {
+        this.EquiposQueAvanzan.add(equipo);
+    }
+
+    public ArrayList<Equipo>EquiposQueAvanzan(){
+        return EquiposQueAvanzan;
+    }
+
 
 }
