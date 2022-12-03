@@ -31,7 +31,7 @@ public class Partido {
         this.resultado = resultado;
     }
 
-    public Partido(Date fecha, Equipo local, Equipo visitante, Resultado resultado) {
+    public Partido(Date fecha, Equipo local, Equipo visitante) {
         super();
         this.fecha = fecha;
         this.local = local;
