@@ -103,7 +103,6 @@ public class Main {
         Grupo grupoE= new Grupo();
         Grupo grupoF= new Grupo();
         Grupo grupoG= new Grupo();
-        Grupo grupoH= new Grupo();
 
         partido1.setResultado(resultado1);
         partido2.setResultado(resultado2);
@@ -128,8 +127,7 @@ public class Main {
         grupoF.addPartido(partido5);
         grupoG.addPartido(partido8);
         grupoG.addPartido(partido6);
-        grupoH.addPartido(partido6);
-        grupoH.addPartido(partido8);
+
 
         System.out.println("Puntaje Senegal:" + senegal.getPuntajePartidoEtapaGrupo());
         System.out.println("Puntaje Holanda:" + paisesbajos.getPuntajePartidoEtapaGrupo());
@@ -162,7 +160,7 @@ public class Main {
         System.out.println(grupoF.getEquiposQueAvanzan().get(0).getNombre());
         System.out.println(grupoF.getEquiposQueAvanzan().get(1).getNombre());
         System.out.println(grupoG.getEquiposQueAvanzan().get(0).getNombre());
-        System.out.println(grupoH.getEquiposQueAvanzan().get(0).getNombre());
+        System.out.println(grupoG.getEquiposQueAvanzan().get(0).getNombre());
 
         System.out.println("Equipos en los Cuartos de Final:");
         Partido partido9= new Partido(new Date(2022,11,9), croacia, brasil);
@@ -199,7 +197,7 @@ public class Main {
         grupoF.addPartido(partido9);
         grupoF.addPartido(partido11);
         grupoG.addPartido(partido9);
-        grupoH.addPartido(partido11);
+        grupoG.addPartido(partido11);
 
         System.out.println("Puntaje Croacia:" + croacia.getPuntajePartidoEtapaGrupo());
         System.out.println("Puntaje Brasil:" + brasil.getPuntajePartidoEtapaGrupo());
