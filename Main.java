@@ -2,6 +2,7 @@ import Garage.Cliente;
 import Garage.Garage;
 import Garage.Tarifa;
 import Garage.Vehiculo;
+import Garage.ReportedeRuedas;
 import com.sun.org.apache.xpath.internal.Arg;
 
 
@@ -9,31 +10,31 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Main {
-    public static void main(String[] args) {
+    public static <Reportederuedas> void main(String[] args) {
         System.out.println("Mundial Qatar 2022");
 
         System.out.println("Grupo A");
         Grupo A = new Grupo("Grupos Mundial");
         System.out.println(A);
 
-        Date comienzoDelMundial = new Date (2022, 11, 20);
+        Date comienzoDelMundial = new Date(2022, 11, 20);
 
-        Equipo Argentina =new Equipo("Argentina");
-        Equipo Alemania =new Equipo("Alemania");
-        Equipo Francia =new Equipo("Francia");
-        Equipo Australia =new Equipo("Australia");
-        Equipo Belgica =new Equipo("Belgica");
-        Equipo Uruguay =new Equipo("Uruguay");
-        Equipo Brasil =new Equipo("Brasil");
-        Equipo Japon =new Equipo("Japon");
+        Equipo Argentina = new Equipo("Argentina");
+        Equipo Alemania = new Equipo("Alemania");
+        Equipo Francia = new Equipo("Francia");
+        Equipo Australia = new Equipo("Australia");
+        Equipo Belgica = new Equipo("Belgica");
+        Equipo Uruguay = new Equipo("Uruguay");
+        Equipo Brasil = new Equipo("Brasil");
+        Equipo Japon = new Equipo("Japon");
 
 
-        Partido pri =new Partido(new Date(2022, 10, 22) ,Argentina,Australia);
-        Partido segundopartido =new Partido(new Date (2022, 10, 22),Australia,Argentina);
-        Partido tercerpartido =new Partido(new Date (2022, 10, 22),Brasil,Uruguay);
-        Partido cuartopartido =new Partido(new Date (2022, 10, 22),Alemania,Francia);
-        Partido quintopartido =new Partido(new Date (2022, 10, 22),Argentina,Japon);
-        Partido sextopartido =new Partido(new Date (2022, 10, 22),Francia,Japon);
+        Partido pri = new Partido(new Date(2022, 10, 22), Argentina, Australia);
+        Partido segundopartido = new Partido(new Date(2022, 10, 22), Australia, Argentina);
+        Partido tercerpartido = new Partido(new Date(2022, 10, 22), Brasil, Uruguay);
+        Partido cuartopartido = new Partido(new Date(2022, 10, 22), Alemania, Francia);
+        Partido quintopartido = new Partido(new Date(2022, 10, 22), Argentina, Japon);
+        Partido sextopartido = new Partido(new Date(2022, 10, 22), Francia, Japon);
         System.out.println("Primeros Partidos");
         System.out.println(pri);
         System.out.println(segundopartido);
@@ -43,15 +44,12 @@ public class Main {
         System.out.println(sextopartido);
 
 
-
-
-
-        Resultado primerPartido = new Resultado(3,1);
-        Resultado segundoPartido = new Resultado(0,2);
-        Resultado tercerPartido = new Resultado(0,3);
-        Resultado cuartoPartido = new Resultado(5,2);
-        Resultado quintoPartido = new Resultado(3,1);
-        Resultado sextoPartido = new Resultado(5,2);
+        Resultado primerPartido = new Resultado(3, 1);
+        Resultado segundoPartido = new Resultado(0, 2);
+        Resultado tercerPartido = new Resultado(0, 3);
+        Resultado cuartoPartido = new Resultado(5, 2);
+        Resultado quintoPartido = new Resultado(3, 1);
+        Resultado sextoPartido = new Resultado(5, 2);
         System.out.println("Resultados");
         System.out.println(primerPartido);
         System.out.println(segundoPartido);
@@ -82,10 +80,10 @@ public class Main {
         System.out.println(" ");
 
 
-
 //Garage//
 
         System.out.println("Garage");
+
         Garage garage = new Garage("Rolex", 1122222233, "Av.Corrientes 800", 8, 1000, 2500, 2600);
         System.out.println(garage);
 
@@ -101,6 +99,8 @@ public class Main {
         System.out.println(moto);
         System.out.println(auto);
 
+        Reportederuedas cambios = new Reportederuedas(1020, 2000, 200, "Cambio de 2 Ruedas");
+        System.out.println(cambios);
     }
 
     }
