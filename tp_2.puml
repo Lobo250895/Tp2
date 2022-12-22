@@ -15,17 +15,50 @@ class Partido {
 + void setResultado(Resultado)
 + String toString()
 }
-class Grupo {
-- ArrayList<Equipo> EquiposQueAvanzan
-+ <<Create>> Grupo(String,ArrayList<Partido>,ArrayList<Equipo>,ArrayList<Equipo>)
-+ ArrayList<Equipo> getEquiposQueAvanzan()
+class Garage.Tarifa {
+- int codTarifa
+- String TipoTarifa
+- String TipoVehiculo
++ <<Create>> Tarifa(int,String,String)
++ void ingresa()
++ void Sale()
++ void Modify()
++ int getCodTarifa()
++ void setCodTarifa(int)
++ String getTipoTarifa()
++ void setTipoTarifa(String)
++ String getTipoVehiculo()
++ void setTipoVehiculo(String)
 + String toString()
+}
+class Garage.Ticket {
+- int codFactura
+- Date Date
+- Date CheckinTime
+- java.util.Date DepartureTime
+- int valor
+- int Comprobante
++ <<Create>> Ticket(int,java.util.Date,java.util.Date,java.util.Date,int,int)
++ void Agregar()
++ void Anular()
++ int getComprobante()
++ int getCodFactura()
++ void setCodFactura(int)
++ Date getDate()
++ void setDate(Date)
++ Date getCheckinTime()
++ void setCheckinTime(Date)
++ Date getDepartureTime()
++ void setDepartureTime(Date)
++ int getValor()
++ void setValor(int)
 }
 class EtapaMundial {
 - String descripcionEtapa
 - ArrayList<Partido> partidos
 - ArrayList<Equipo> EquiposQueAvanzan
 + <<Create>> EtapaMundial(String,ArrayList<Partido>,ArrayList<Equipo>)
++ <<Create>> EtapaMundial()
 + String getDescripcionEtapa()
 + void setDescripcionEtapa(String)
 + ArrayList<Partido> getPartidos()
@@ -55,8 +88,10 @@ class Main {
 + {static} void main(String[])
 }
 class Llave {
-- ArrayList<Equipo> EquiposQueAvanzan
-+ <<Create>> Llave(String,ArrayList<Partido>,ArrayList<Equipo>,ArrayList<Equipo>)
+- ArrayList<Equipo> equiposQueAvanzan
++ <<Create>> Llave()
++ <<Create>> Llave(String)
++ ArrayList<Equipo> getEquiposQueAvanzan()
 + String toString()
 }
 class Resultado {
@@ -71,8 +106,146 @@ class Resultado {
 + int getGolesVisitante()
 + void setGolesVisitante(int)
 }
+class Garage.Garage {
+- String name
+- int phone
+- String address
+- int openingHours
+- int price
+- int totalcarsReceived
+- int maximumCapacity
+- int capacidadCoches
+- int capacidadMotos
++ <<Create>> Garage(String,int,String,int,int,int,int)
++ String getName()
++ void setName(String)
++ int getPhone()
++ void setPhone(int)
++ String getAddress()
++ void setAddress(String)
++ int getOpeningHours()
++ void setOpeningHours(int)
++ int getPrice()
++ void setPrice(int)
++ int getTotalcarsReceived()
++ void setTotalcarsReceived(int)
++ int getMaximumCapacity()
++ void setMaximumCapacity(int)
++ String toString()
++ void Enter()
++ void update()
++ void withdraw()
++ void inform()
+}
+class Garage.Moto {
+- String Marca
+- int Cilindrada
++ <<Create>> Moto(String,int,String,java.util.Date,java.util.Date,String,java.util.Date,String,int)
++ String getMarca()
++ void setMarca(String)
++ int getCilindrada()
++ void setCilindrada(int)
++ void Desplazarse()
++ String toString()
+}
+class Garage.ReportedeRuedas {
+- int idReporte
+- int PriceofWheels
+- int halfMile
++ String Informacion
++ <<Create>> ReportedeRuedas(int,int,int)
++ int getIdReporte()
++ void setIdReporte(int)
++ int getPriceofWheels()
++ void setPriceofWheels(int)
++ int getHalfMile()
++ void setHalfMile(int)
++ String getInformacion()
++ String toString()
+}
+class Garage.Cliente {
+- int idClient
+- String name
+- int DNI
+- int phone
+- String Address
++ <<Create>> Cliente(int,String,int,int,String)
++ int getIdClient()
++ void setIdClient(int)
++ String getName()
++ void setName(String)
++ int getDNI()
++ void setDNI(int)
++ int getPhone()
++ void setPhone(int)
++ String getAddress()
++ void setAddress(String)
++ void Enter()
++ void usaServicio()
++ void Delete()
++ void Modify()
++ String toString()
+}
+class Garage.Vehiculo {
+- String Patent
+- int DNIClient
+- String TypeofCar
+- Date Date
+- java.util.Date CheckinTime
+- String State
+- Date DepartureTime
++ <<Create>> Vehiculo(String,int,String,java.util.Date,java.util.Date,String,java.util.Date)
++ void ingresa()
++ void Sale()
++ void Modify()
++ String getPatent()
++ void setPatent(String)
++ int getDNIClient()
++ void setDNIClient(int)
++ String getTypeofCar()
++ void setTypeofCar(String)
++ Date getDate()
++ void setDate(Date)
++ Date getCheckinTime()
++ void setCheckinTime(Date)
++ String getState()
++ void setState(String)
++ Date getDepartureTime()
++ void setDepartureTime(Date)
++ String toString()
+}
+class Grupo {
+- ArrayList<Equipo> equiposQueAvanzan
++ <<Create>> Grupo()
++ <<Create>> Grupo(String)
++ ArrayList<Equipo> getEquiposQueAvanzan()
++ String toString()
+}
+class Garage.Auto {
+- String Marca
+- Integer numeroPuertas
++ <<Create>> Auto(String,int,String,java.util.Date,java.util.Date,String,java.util.Date,String,Integer)
++ String getMarca()
++ void setMarca(String)
++ Integer getNumeroPuertas()
++ void setNumeroPuertas(Integer)
++ void Desplazarse()
++ String toString()
+}
+class Garage.Empleado {
+- String idEmpleado
+- String Cargo
++ String getIdEmpleado()
++ void setIdEmpleado(String)
++ String getCargo()
++ void setCargo(String)
++ void ToRegister()
++ void VerificarLogin()
+}
 
 
-EtapaMundial <|-- Grupo
 EtapaMundial <|-- Llave
+Garage.Vehiculo <|-- Garage.Moto
+EtapaMundial <|-- Grupo
+Garage.Vehiculo <|-- Garage.Auto
 @enduml
