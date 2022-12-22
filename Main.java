@@ -68,7 +68,7 @@ public class Main {
         Partido partido7= new Partido(new Date(2022,11,11), marruecos, españa);
         Partido partido8= new Partido(new Date(2022,11,12), japon, suiza);
 
-        System.out.println("Partidos del torneo.Octavos");
+        System.out.println("Partidos del torneo Octavos de final");
         System.out.println("Partido:" + partido1);
         System.out.println("Partido:" + partido2 );
         System.out.println("Partido:" + partido3 );
@@ -86,7 +86,7 @@ public class Main {
         Resultado resultado6= new Resultado(4,1);
         Resultado resultado7= new Resultado(3,0);
         Resultado resultado8= new Resultado(6,1);
-        System.out.println("Resultados del torneo.Octavos");
+        System.out.println("Resultados del torneo Octavos de final");
         System.out.println(resultado1);
         System.out.println(resultado2);
         System.out.println(resultado3);
