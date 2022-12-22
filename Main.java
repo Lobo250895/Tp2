@@ -84,6 +84,8 @@ public class Main {
 
         System.out.println("Garage");
 
+        Garage.ingresarCoche(Garage);
+
         Garage garage = new Garage("Rolex", 1122222233, "Av.Corrientes 800", 8, 1000, 2500, 2600);
         System.out.println(garage);
 
@@ -101,6 +103,7 @@ public class Main {
 
         Reportederuedas cambios = new Reportederuedas(1020, 2000, 200, "Cambio de 2 Ruedas");
         System.out.println(cambios);
+
     }
 
     }

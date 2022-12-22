@@ -8,6 +8,8 @@ public class Garage {
     private int price;
     private int totalcarsReceived;
     private int maximumCapacity;
+    private int capacidadCoches;
+    private int capacidadMotos;
 
     public Garage(String name, int phone, String address, int openingHours, int price, int totalcarsReceived,
                   int maximumCapacity) {
@@ -88,5 +90,8 @@ public class Garage {
     public void inform() {
         return;
     }
+
+
+
 
 }
